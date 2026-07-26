@@ -3,6 +3,9 @@ import react, { reactCompilerPreset } from '@vitejs/plugin-react'
 import babel from '@rolldown/plugin-babel'
 
 export default defineConfig({
+  optimizeDeps: {
+    include: ['redux-persist'],
+  },
   server: {
     proxy: {
       '/api': {
